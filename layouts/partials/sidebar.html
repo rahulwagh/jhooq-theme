@@ -57,24 +57,16 @@
     {{- $posts := where (where .Site.RegularPages "Permalink" "!=" .Permalink) "Type" "in" $s.mainSections }}
     {{- $featured := default 8 $s.numberOfFeaturedPosts }}
     {{- with first $featured (where $posts "Params.featured" true)}}
-    <h2 class="mt-4">{{ T "featured_posts" }}</h2>
+    <!--<h2 class="mt-4">{{ T "featured_posts" }}</h2>
     <ul>
       {{- range . }}
       <li>
         <a href="{{ .Permalink }}" class="nav-link" title="{{ .Title }}">{{ .Title }}</a>
       </li>
       {{- end }}
-    </ul>
+    </ul>-->
     {{- end }}
-    <h2 class="mt-4">{{ T "recent_posts" }}</h2>
-    <ul class="flex-column">
-      {{- $recent := default 8 $s.numberOfRecentPosts }}
-      {{- range first $recent $posts }}
-      <li>
-        <a href="{{ .Permalink }}" class="nav-link" title="{{ .Title }}">{{ .Title }}</a>
-      </li>
-      {{- end }}
-    </ul>
+
     {{- $tagsLimit := (default 100 $s.numberOfTagsShown) }}
     {{- range $key, $value := .Site.Taxonomies }}
     {{- if gt $value 0 }}
@@ -114,5 +106,21 @@
     </div>
     {{- end }}
     {{- end }}
+
+    <h2 class="mt-4">{{ T "recent_posts" }}</h2>
+    <ul class="flex-column">
+      {{- $recent := default 8 $s.numberOfRecentPosts }}
+      {{- range first $recent $posts }}
+      <li>
+        <a href="{{ .Permalink }}" class="nav-link" title="{{ .Title }}">{{ .Title }}</a>
+      </li>
+      {{- end }}
+    </ul>
+
+    <h2>{{ $s.Author }}</h2>
+    <div>
+      {{ $s.IntroDescription }}
+    </div>
+    <a href='{{ absLangURL "about/" }}' class="button mt-1" role="button">{{ T "read_more" }}</a>
   </section>
 </aside>
