@@ -41,7 +41,7 @@ theme = "jhooq-theme"
 Goto the directory `themes/jhooq-theme` and then run the normal 
 
 ```
-git pull
+git pull https://github.com/rahulwagh/jhooq-theme
 ```
 
 it will update your submodule
