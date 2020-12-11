@@ -12,3 +12,8 @@ git fetch upstream
 
 ## rebase your branch
 git rebase upstream/master
+
+
+## git clone recursively 
+
+git clone --recurse-submodules https://github.com/chipzoller/hugo-clarity.git
