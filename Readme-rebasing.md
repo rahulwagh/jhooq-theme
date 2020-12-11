@@ -35,3 +35,13 @@ git clone --recurse-submodules https://github.com/chipzoller/hugo-clarity.git
 ```
 theme = "jhooq-theme"
 ```
+
+## how to take update of submodule
+
+Goto the directory `themes/jhooq-theme` and then run the normal 
+
+```
+git pull
+```
+
+it will update your submodule
