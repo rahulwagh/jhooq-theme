@@ -11,9 +11,27 @@ git fetch upstream
 ```
 
 ## rebase your branch
+```
 git rebase upstream/master
-
+```
 
 ## git clone recursively 
-
+```
 git clone --recurse-submodules https://github.com/chipzoller/hugo-clarity.git
+```
+
+## how i added  a submodule
+
+1. Goto `.gitmodules` and update the following content 
+
+```
+[submodule "themes/jhooq-theme"]
+	path = themes/jhooq-theme
+	url = https://github.com/rahulwagh/jhooq-theme.git
+```
+
+2. Goto `config.toml` update the theme path
+
+```
+theme = "jhooq-theme"
+```
