@@ -1,7 +1,7 @@
 {{ $s := .Site.Params }}
 <aside class="sidebar">
   <section class="sidebar_inner">
-    {{- if $s.IntroDescription }}
+    <!--{{- if $s.IntroDescription }}
       {{- $author := $s.Author  }}
       {{- $showAuthorPhoto := false }}
       {{- $fullAuthor := reflect.IsMap $author }}
@@ -28,7 +28,7 @@
     {{- end }}
     {{- $posts := where (where .Site.RegularPages "Permalink" "!=" .Permalink) "Type" "in" $s.mainSections }}
     {{- $featured := default 8 $s.numberOfFeaturedPosts }}
-    {{- with first $featured (where $posts "Params.featured" true)}}
+    {{- with first $featured (where $posts "Params.featured" true)}}-->
     <!--<h2 class="mt-4">{{ T "featured_posts" }}</h2>
     <ul>
       {{- range . }}
@@ -37,7 +37,7 @@
       </li>
       {{- end }}
     </ul>-->
-    {{- end }}
+    <!--{{- end }}-->
 
     {{- $tagsLimit := (default 100 $s.numberOfTagsShown) }}
     {{- range $key, $value := .Site.Taxonomies }}
