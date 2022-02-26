@@ -83,8 +83,24 @@
         {{ end }}
         {{ if gt (len $value.ByCount) $tagsLimit }}
         <br>
+
         <div class="post_tags_toggle button">{{ T (printf "all_%s" (lower $key)) }}</div>
         {{- $tagsInfo := newScratch }}
+
+        <!-- Google Ads start: side-bar-1 -->
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5632796402283546"
+                crossorigin="anonymous"></script>
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5632796402283546"
+             data-ad-slot="4737239637"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        <!-- Google Ads end: side-bar-1 -->
+
         <div class="post_tags">
           <div class="tags_list">
             {{- range $value.Alphabetical }}
@@ -106,6 +122,20 @@
     </div>
     {{- end }}
     {{- end }}
+    <div>test-2</div>
+    <!-- Google Ads start : side-bar-2 -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5632796402283546"
+            crossorigin="anonymous"></script>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-5632796402283546"
+         data-ad-slot="4170580657"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+    <!-- Google Ads end: side-bar-2 -->
 
     <h2 class="mt-4">{{ T "recent_posts" }}</h2>
     <ul class="flex-column">
@@ -116,11 +146,38 @@
       </li>
       {{- end }}
     </ul>
-
+    <div>test-3</div>
+    <!-- Google Ads start : side-bar-3 -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5632796402283546"
+            crossorigin="anonymous"></script>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-5632796402283546"
+         data-ad-slot="7646791234"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+    <!-- Google Ads end: side-bar-3 -->
     <h2>{{ $s.Author }}</h2>
     <div>
       {{ $s.IntroDescription }}
     </div>
     <a href='{{ absLangURL "about/" }}' class="button mt-1" role="button">{{ T "read_more" }}</a>
+    <!-- Google Ads start: side-bar-4 -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5632796402283546"
+            crossorigin="anonymous"></script>
+    <!-- side-bar-4 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-5632796402283546"
+         data-ad-slot="5758994497"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+    <!-- Google Ads end: side-bar-4 -->
   </section>
 </aside>

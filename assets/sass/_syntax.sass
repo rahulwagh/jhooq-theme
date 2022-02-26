@@ -14,10 +14,12 @@ code
   font-family: 'Monaco', monospace
   word-break: break-all
   &.noClass
-    --inlineColor: rgb(194, 29, 0)
     color: var(--inlineColor)
     display: inline
     line-break: anywhere
+    background: var(--single-highligh)
+    padding: 0 .5em 0 .5em
+    font-style: italic
 .windows .highlight
   overflow-x: hidden
   &:hover
@@ -38,7 +40,7 @@ code
     border-radius: 0.5rem
     position: relative
     padding: 0 1rem
-    margin: 1.5rem auto 1rem auto
+    //margin: 1.5rem auto 1rem auto
     & + &
       margin-top: 2.25rem
     &:hover > div
@@ -64,8 +66,8 @@ code
     color: var(--light) !important
     border-radius: 4px
     font-family: 'Monaco', monospace
-    padding-top: 1.5rem
-    padding-bottom: 2rem
+    padding-top: .5rem
+    padding-bottom: .5rem
 
   table
     display: grid
