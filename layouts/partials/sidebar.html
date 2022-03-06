@@ -1,11 +1,7 @@
-{{ $s := site.Params }}
+{{ $s := .Site.Params }}
 <aside class="sidebar">
   <section class="sidebar_inner">
-    {{- $introDescription := $s.introDescription }}
-    {{- with .Params.introDescription }}
-      {{- $introDescription = . }}
-    {{- end }}
-    {{- if $introDescription }}
+    <!--{{- if $s.IntroDescription }}
       {{- $author := $s.Author  }}
       {{- $showAuthorPhoto := false }}
       {{- $fullAuthor := reflect.IsMap $author }}
@@ -23,7 +19,7 @@
         <h2>{{  if $fullAuthor }}{{ $author.name }}{{ else }}{{ $author }}{{ end }}</h2>
       {{- end }}
       <div class="author_bio">
-        {{ markdownify $introDescription }}
+        {{ markdownify $s.IntroDescription }}
       </div>
       {{- if ( ne $s.introURL false ) }}
       {{- $r := T "read_more" }}
@@ -56,7 +52,7 @@
 
     {{- $posts := where (where .Site.RegularPages "Permalink" "!=" .Permalink) "Type" "in" $s.mainSections }}
     {{- $featured := default 8 $s.numberOfFeaturedPosts }}
-    {{- with first $featured (where $posts "Params.featured" true)}}
+    {{- with first $featured (where $posts "Params.featured" true)}}-->
     <!--<h2 class="mt-4">{{ T "featured_posts" }}</h2>
     <ul>
       {{- range . }}
@@ -65,7 +61,7 @@
       </li>
       {{- end }}
     </ul>-->
-    {{- end }}
+    <!--{{- end }}-->
 
     {{- $tagsLimit := (default 100 $s.numberOfTagsShown) }}
     {{- range $key, $value := .Site.Taxonomies }}
